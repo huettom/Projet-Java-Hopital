@@ -1,4 +1,4 @@
-package javaapplication7;
+package jdbcv2018;
 
 import com.jcraft.jsch.*;
 
