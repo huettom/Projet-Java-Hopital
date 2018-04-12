@@ -30,9 +30,11 @@ public class ProjetHopital {
         
         
         try{
+
         //connexion a la base de donnée
-        Connexion maconnexion = new Connexion(nomBDD, login, password);
-            
+        Connexion maconnexion = new Connexion(nomBDD, login, password);//non redirection à catch
+        System.out.println("Vous êtes connecté à la base de donnée."); 
+        
         System.out.println("Rechercher dans la table docteur, les cardiologues !");
         requete1 = "SELECT * FROM `hopital`.`docteur` WHERE (CONVERT(`numero` USING utf8) LIKE '%Cardiologue%' OR CONVERT(`specialite` USING utf8) LIKE '%Cardiologue%')";
         
@@ -48,7 +50,9 @@ public class ProjetHopital {
         
         
         }
-        catch(SQLException | ClassNotFoundException e1) {}
+        catch(SQLException | ClassNotFoundException e) {
+        System.out.println("Vous n'êtes pas connecté à la base de donnée.");
+        }
 
     }
 }
