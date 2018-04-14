@@ -7,6 +7,7 @@ package projethopital;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -47,6 +48,28 @@ public class ProjetHopital {
         requete1 = "SELECT salaire FROM `hopital`.`infirmier` WHERE `salaire`";
         listerequete = maconnexion.remplirChampsRequete(requete1);
         System.out.println(listerequete);
+        
+        /*System.out.println("Ajouter un patient!");
+        
+        //Scanner sc = new Scanner(System.in);
+        //System.out.print("Entrer le nom: ");
+        //int id= sc.nextInt();
+        int id= 93;
+        String nom = "Lhuillier"; String prenom = "Simon";
+        String adresse = "quelque part";String tele= "06 14 13 12 11";
+        // Adresse à ajouter //
+        
+        //lancer ajouter quelqu'un
+        requete1 = "INSERT INTO `employe`(`numero`, `nom`,`prenom`, `adresse`, `tel`) "
+                + "VALUES('"+id+"','"+nom+"','"+prenom+"','"+adresse+"','"+tele+"')";
+        maconnexion.executeUpdate(requete1);*/
+        
+        System.out.println("Afficher Employé numéro 93 ! ");
+        
+        requete1 = "SELECT * FROM `hopital`.`employe` WHERE `numero` = 93 ";
+        listerequete = maconnexion.remplirChampsRequete(requete1);
+        System.out.println(listerequete);
+        
         
         
         }
