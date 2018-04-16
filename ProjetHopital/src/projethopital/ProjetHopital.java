@@ -16,13 +16,18 @@ import java.util.*;
 public class ProjetHopital {
 
     
-    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String requete1;
+        
+        Fenetre f = new Fenetre();
+        
+        
+        
+        
+        /*String requete1;
         String nomBDD = "hopital";
         String login = "root";
         String password = "root";
@@ -38,7 +43,6 @@ public class ProjetHopital {
         
         System.out.println("Rechercher dans la table docteur, les cardiologues !");
         requete1 = "SELECT * FROM `hopital`.`docteur` WHERE (CONVERT(`numero` USING utf8) LIKE '%Cardiologue%' OR CONVERT(`specialite` USING utf8) LIKE '%Cardiologue%')";
-        
         listerequete = maconnexion.remplirChampsRequete(requete1);
         System.out.println(listerequete);
         
@@ -49,20 +53,20 @@ public class ProjetHopital {
         listerequete = maconnexion.remplirChampsRequete(requete1);
         System.out.println(listerequete);
         
-        /*System.out.println("Ajouter un patient!");
+        //System.out.println("Ajouter un patient!");
         
         //Scanner sc = new Scanner(System.in);
         //System.out.print("Entrer le nom: ");
         //int id= sc.nextInt();
         int id= 93;
         String nom = "Lhuillier"; String prenom = "Simon";
-        String adresse = "quelque part";String tele= "06 14 13 12 11";
+        String adresse = "quelque part"; String tele= "06 14 13 12 11";
         // Adresse à ajouter //
         
         //lancer ajouter quelqu'un
         requete1 = "INSERT INTO `employe`(`numero`, `nom`,`prenom`, `adresse`, `tel`) "
                 + "VALUES('"+id+"','"+nom+"','"+prenom+"','"+adresse+"','"+tele+"')";
-        maconnexion.executeUpdate(requete1);*/
+        maconnexion.executeUpdate(requete1);//
         
         System.out.println("Afficher Employé numéro 93 ! ");
         
@@ -75,7 +79,7 @@ public class ProjetHopital {
         }
         catch(SQLException | ClassNotFoundException e) {
         System.out.println("Vous n'êtes pas connecté à la base de donnée.");
-        }
+        }*/
 
     }
 }
