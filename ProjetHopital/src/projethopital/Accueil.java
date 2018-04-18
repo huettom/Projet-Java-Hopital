@@ -15,11 +15,10 @@ import java.sql.*;
  *
  * @author tomhuet
  */
-public class Acceuil extends JFrame {
+public class Accueil extends JFrame {
                
-    public Acceuil() {
+    public Accueil() {
         initComponents();
-        //lancer();
     }
     
     
@@ -27,12 +26,8 @@ public class Acceuil extends JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 766));
@@ -40,37 +35,15 @@ public class Acceuil extends JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 766));
         jPanel1.setLayout(null);
         
-        jTextArea1.setColumns(20);
+        /*jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jPanel1.add(jTextArea1);
-        jTextArea1.setBounds(640, 180, 430, 290);
+        jTextArea1.setBounds(640, 180, 430, 290);*/
 
         jLabel2.setFont(new java.awt.Font("SERomand", 0, 70)); // NOI18N
         jLabel2.setText("Accueil");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(40, -10, 310, 260);
-
-        jLabel3.setFont(new java.awt.Font("SERomand", 1, 48)); // NOI18N
-        jLabel3.setText("Connexion Locale");
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, 580, 520, 70);
-
-        jLabel4.setFont(new java.awt.Font("SERomand", 1, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Connexion Distante");
-        jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(660, 580, 570, 70);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\sim97\\Desktop\\Simon\\ECE-ING3\\ECE-Paris\\Informatique - Java\\HopitalInteraceGraphique\\aerial-view-3292550_1280.jpg")); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1280, 766));
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 770);
 
         jButton1.setBackground(new java.awt.Color(173, 192, 192));
         jButton1.setFont(new java.awt.Font("SERomand", 0, 48)); // NOI18N
@@ -78,11 +51,13 @@ public class Acceuil extends JFrame {
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setOpaque(false);
-        /*jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
-        });*/
+        });
+        
         jPanel1.add(jButton1);
         jButton1.setBounds(660, 580, 570, 70);
 
@@ -93,11 +68,13 @@ public class Acceuil extends JFrame {
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setOpaque(false);
-        /*jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
-        });*/
+        });
+        
         jPanel1.add(jButton2);
         jButton2.setBounds(100, 580, 520, 70);
 
@@ -115,7 +92,7 @@ public class Acceuil extends JFrame {
         pack();
     }
     
-    public void lancer() {
+    /*public void lancer() {
         try{
                 
             Connexion maconnexion = new Connexion(nomBDD, login, password);
@@ -134,11 +111,24 @@ public class Acceuil extends JFrame {
             catch(SQLException | ClassNotFoundException e) {
             System.out.println("Vous n'êtes pas connecté à la base de donnée.");
             }
+    }*/
+    
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        new FenetreConnexion().setVisible(true);
+        this.setVisible(false);
+    }                                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        new FenetreConnexion().setVisible(true);
+        this.setVisible(false);
     }
+    
+    
     
     public static void main(String args[]) {
         
-        System.out.println("salut");
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -153,13 +143,13 @@ public class Acceuil extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Acceuil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Acceuil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Acceuil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Acceuil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         //</editor-fold>
@@ -168,9 +158,7 @@ public class Acceuil extends JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                Acceuil ac = new Acceuil();
-                System.out.println("salut");
-                ac.lancer();
+                Accueil ac = new Accueil();
                 ac.setVisible(true);
             }
         });
@@ -179,20 +167,10 @@ public class Acceuil extends JFrame {
     
     
     // Variables declaration
-    protected Connexion maconnexion;
-    protected String nomBDD = "hopital";
-    protected String login = "root";
-    protected String password = "root";
-    protected String requete1;
-    protected ArrayList<String> listerequete;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    protected javax.swing.JTextArea jTextArea1;
     // End of variables declaration  
     
     
