@@ -34,6 +34,7 @@ public class MiseAJour extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,7 +60,7 @@ public class MiseAJour extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(310, 530, 620, 60);
+        jTextField1.setBounds(300, 490, 620, 60);
 
         jLabel3.setFont(new java.awt.Font("SERomand", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -81,6 +82,10 @@ public class MiseAJour extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
         jButton1.setBounds(1090, 680, 130, 40);
+
+        jButton2.setText("jButton2");
+        jPanel1.add(jButton2);
+        jButton2.setBounds(510, 610, 200, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,6 +149,7 @@ public class MiseAJour extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -129,7 +129,7 @@ public class Reporting extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         DefaultCategoryDataset graph = new DefaultCategoryDataset();
-        graph.setValue(50, "Nombre","chambre");
+        graph.setValue(24, "Nombre","chambre");
         graph.setValue(13, "Nombre","Docteur");
         graph.setValue(25, "Nombre","Infirmier");
         graph.setValue(38, "Nombre","Malade");

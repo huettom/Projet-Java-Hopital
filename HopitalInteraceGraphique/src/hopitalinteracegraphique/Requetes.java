@@ -39,7 +39,6 @@ public class Requetes extends javax.swing.JFrame {
         list1 = new java.awt.List();
         jPanel3 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jCheckBox8 = new javax.swing.JCheckBox();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
@@ -128,9 +127,6 @@ public class Requetes extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox8.setFont(new java.awt.Font("SERomand", 0, 21)); // NOI18N
-        jCheckBox8.setText("Soigne");
-
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("SERomand", 0, 14)); // NOI18N
         jRadioButton2.setText("Docteur");
@@ -191,9 +187,6 @@ public class Requetes extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jCheckBox8))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton6)
@@ -206,7 +199,7 @@ public class Requetes extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jRadioButton8)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,8 +220,6 @@ public class Requetes extends javax.swing.JFrame {
                 .addComponent(jRadioButton7)
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton8)
-                .addGap(7, 7, 7)
-                .addComponent(jCheckBox8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -297,6 +288,7 @@ public class Requetes extends javax.swing.JFrame {
 
     private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
         // TODO add your handling code here:
+        
         
     }//GEN-LAST:event_list1ActionPerformed
 
@@ -369,7 +361,6 @@ public class Requetes extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

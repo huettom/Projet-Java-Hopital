@@ -5,6 +5,8 @@
  */
 package hopitalinteracegraphique;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author sim97
@@ -159,11 +161,19 @@ public class Connexion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        //if blablabla
-        //if(BDD=="bdd")
-        
+        //LES DEUX LIGNES SUIVANTES SONT A SUPPRIMER AVANT LE RENDU
+new ChoixAction().setVisible(true);
+        this.setVisible(false);        
+//Conditions de sign in
+        String pass=jPasswordField1.getText();
+        String login=jTextField2.getText();
+        String bdd=jTextField1.getText();
+        if(pass.equalsIgnoreCase("")&&login.equalsIgnoreCase("root")&&bdd.equalsIgnoreCase("hopital"))
+        {
+          
         new ChoixAction().setVisible(true);
         this.setVisible(false);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
