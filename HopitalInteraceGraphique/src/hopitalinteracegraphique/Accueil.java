@@ -28,8 +28,6 @@ public class Accueil extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -38,16 +36,10 @@ public class Accueil extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 766));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 766));
         jPanel1.setLayout(null);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(640, 180, 430, 290);
 
         jLabel2.setFont(new java.awt.Font("SERomand", 0, 70)); // NOI18N
         jLabel2.setText("Accueil");
@@ -69,6 +61,7 @@ public class Accueil extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(660, 580, 570, 70);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\sim97\\Desktop\\Simon\\ECE-ING3\\ECE-Paris\\Informatique - Java\\HopitalInteraceGraphique\\aerial-view-3292550_1280.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setPreferredSize(new java.awt.Dimension(1280, 766));
@@ -80,6 +73,7 @@ public class Accueil extends javax.swing.JFrame {
         jButton1.setText("Connexion Distante");
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -94,6 +88,7 @@ public class Accueil extends javax.swing.JFrame {
         jButton2.setToolTipText("");
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setOpaque(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -171,7 +166,5 @@ public class Accueil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

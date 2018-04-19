@@ -169,7 +169,8 @@ new ChoixAction().setVisible(true);
         String login=jTextField2.getText();
         String bdd=jTextField1.getText();
         if(pass.equalsIgnoreCase("")&&login.equalsIgnoreCase("root")&&bdd.equalsIgnoreCase("hopital"))
-        { 
+        {
+          
         new ChoixAction().setVisible(true);
         this.setVisible(false);
         }

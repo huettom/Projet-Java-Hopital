@@ -35,7 +35,6 @@ public class Recherchechoixtable extends JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
@@ -117,10 +116,13 @@ public class Recherchechoixtable extends JFrame {
         buttonGroup1.add(jRadioButton7);
         jRadioButton7.setFont(new java.awt.Font("SERomand", 0, 14)); // NOI18N
         jRadioButton7.setText("Service");
+        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton7ActionPerformed(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("SERomand", 0, 14)); // NOI18N
-        jRadioButton8.setText("Soigne");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -136,7 +138,7 @@ public class Recherchechoixtable extends JFrame {
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton5)
                     .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton8))
+                    )
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -157,7 +159,6 @@ public class Recherchechoixtable extends JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton7)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -178,6 +179,13 @@ public class Recherchechoixtable extends JFrame {
 
         jButton1.setText("GO !");
         jPanel1.add(jButton1);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+
+        });
         jButton1.setBounds(150, 375, 80, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -194,34 +202,88 @@ public class Recherchechoixtable extends JFrame {
         pack();
     }
     
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        if( "1".equals(jRadioButton1.getActionCommand()))
+       {
+        new RechercheChambre().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "2".equals(jRadioButton2.getActionCommand()))
+       {
+        new RechercheDocteur().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "3".equals(jRadioButton3.getActionCommand()))
+       {
+        new RechercheEmploye().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "4".equals(jRadioButton4.getActionCommand()))
+       {
+        new RechercheHospi().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "5".equals(jRadioButton5.getActionCommand()))
+       {
+        new RechercheInfirm().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "6".equals(jRadioButton6.getActionCommand()))
+       {
+        new RechercheMalade().setVisible(true);
+        this.setVisible(false);
+       }
+        if( "7".equals(jRadioButton7.getActionCommand()))
+       {
+        new RechercheService().setVisible(true);
+        this.setVisible(false);
+       }
+    } 
+    
+    
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         new ChoixAction().setVisible(true);
         this.setVisible(false);
-    }                                         
+    }      
+    
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton1.setActionCommand("1");
     }                                             
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton2.setActionCommand("2");
     }                                             
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton3.setActionCommand("3");
     }                                             
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton4.setActionCommand("4");
     }                                             
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton5.setActionCommand("5");
     }                                             
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        jRadioButton6.setActionCommand("6");
+    }
+    
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+        jRadioButton7.setActionCommand("7");
     } 
     
     
@@ -280,7 +342,6 @@ public class Recherchechoixtable extends JFrame {
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     // End of variables declaration   
     
 }
