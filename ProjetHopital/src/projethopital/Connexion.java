@@ -10,6 +10,8 @@ package projethopital;
  */
 import java.sql.*;
 import java.util.ArrayList;
+import Recherche.*;
+import AjouterSupp.*;
 
 /**
  * 

@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projethopital;
+package Recherche;
 
 import java.awt.event.*;
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.sql.*;
+import projethopital.ChoixAction;
+import projethopital.Connexion;
 
 
 /**

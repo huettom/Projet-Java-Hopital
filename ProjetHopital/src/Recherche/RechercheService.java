@@ -3,26 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projethopital;
+package Recherche;
+
 
 import java.awt.event.*;
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.sql.*;
+import projethopital.ChoixAction;
+import projethopital.Connexion;
+
 
 /**
  *
  * @author tomhuet
  */
-public class RechercheDocteur extends JFrame {
+public class RechercheService extends JFrame {
     
-    public RechercheDocteur() {
+    public RechercheService() {
         initComponents();
     }
-
-
-    @SuppressWarnings("unchecked")                         
+    
+    @SuppressWarnings("unchecked")
+                              
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -39,17 +43,12 @@ public class RechercheDocteur extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
-        jLabel1.setText("Recherche Docteur");
+        jLabel1.setText("Recherche Service");
 
-        jLabel2.setText("Numero ");
+        jLabel2.setText("Code");
 
-        jLabel3.setText("Specialité");
+        jLabel3.setText("Nom");
 
-        jTextField1.setText("");
-     
-
-        jTextField2.setText("");
-        
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -77,34 +76,34 @@ public class RechercheDocteur extends JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(79, 79, 79)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(423, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(144, 144, 144))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(91, 91, 91)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(79, 79, 79)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel1)))
+                .addContainerGap(423, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,20 +146,19 @@ public class RechercheDocteur extends JFrame {
         );
 
         pack();
-    }                       
-
+    }
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        new Recherchechoixtable().setVisible(true);
+        new ChoixAction().setVisible(true);
         this.setVisible(false);
-    }    
+    } 
     
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         this.lancer();
-    }            
+    }     
     
     public void lancer() {
         
@@ -168,12 +166,11 @@ public class RechercheDocteur extends JFrame {
                 
             Connexion maconnexion = new Connexion(nomBDD, login, password);
             
-            rchdoc();
+            rchservice();
             listerequete = maconnexion.remplirChampsRequete(requete1);
             //Affichage en fenetre
             jTextArea1.setText("Voila la requete: " + listerequete);
             this.setVisible(true);
-            
             
             }
             catch(SQLException | ClassNotFoundException e) {
@@ -181,36 +178,38 @@ public class RechercheDocteur extends JFrame {
             }
     }
     
-    
-    public void rchdoc() {
+    public void rchservice() {
         //requete
-        
+        /*requete1 = "SELECT * FROM `hopital`.`infirmier` WHERE `rotation` = 'NUIT'";
+        listerequete = maconnexion.remplirChampsRequete(requete1);
+        System.out.println(listerequete);
+        SELECT * FROM `hopital`.`chambre` WHERE `rotation` = 'NUIT'"*/
          
-        recupnum = jTextField1.getText();
-        recupspe = jTextField2.getText();
+        recupcode = jTextField1.getText();
+        recupnom = jTextField2.getText();
         
-        if (("".equals(recupnum))&&("".equals(recupspe))) {
-            this.requete1 = "SELECT * FROM `hopital`.`docteur`";
+        if (("".equals(recupcode))&&("".equals(recupnom))) {
+            this.requete1 = "SELECT * FROM `hopital`.`service`";
         }else
         {
-            if("".equals(recupspe))
+            if("".equals(recupnom))
             {
-               this.requete1 = "SELECT * FROM `hopital`.`docteur` WHERE `numero` = "+ recupnum +"";
+               this.requete1 = "SELECT * FROM `hopital`.`service` WHERE `code` = '"+ recupcode +"'";
                
             }else 
             {
-                if("".equals(recupnum)) {
+                if("".equals(recupcode)) {
                     
-                    this.requete1 = "SELECT * FROM `docteur` WHERE `specialite` = '"+ recupspe +"'";
+                    this.requete1 = "SELECT * FROM `service` WHERE `nom` = '"+ recupnom +"'";
                     
-                }else this.requete1 = "SELECT * FROM `docteur` WHERE `numero` = "+ recupnum +" AND `specialite` = '"+ recupspe +"'";
+                }else this.requete1 = "SELECT * FROM `service` WHERE `code` = '"+ recupcode +"' AND `nom` = '"+ recupnom +"'";
             
             }
         }
         
     }
     
-
+    
     /**
      * @param args the command line arguments
      */
@@ -228,13 +227,13 @@ public class RechercheDocteur extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RechercheDocteur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RechercheService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RechercheDocteur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RechercheService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RechercheDocteur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RechercheService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RechercheDocteur.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RechercheService.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -242,17 +241,17 @@ public class RechercheDocteur extends JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new RechercheDocteur().setVisible(true);
+                new RechercheService().setVisible(true);
             }
         });
     }
-
+    
     
     
     
     // Variables declaration - do not modify
-    protected String recupnum;
-    protected String recupspe;
+    protected String recupcode;
+    protected String recupnom;
     protected String nomBDD = "hopital";
     protected String login = "root";
     protected String password = "root";
@@ -269,8 +268,6 @@ public class RechercheDocteur extends JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    // End of variables declaration                   
+    // End of variables declaration
+    
 }
-    
-    
-

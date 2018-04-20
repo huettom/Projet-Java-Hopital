@@ -5,11 +5,15 @@
  */
 package projethopital;
 
+import AjouterSupp.MiseAJour;
+import Recherche.Recherchechoixtable;
 import java.awt.event.*;
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.sql.*;
+import Recherche.*;
+import AjouterSupp.*;
 
 /**
  *
@@ -53,7 +57,7 @@ public class ChoixAction extends JFrame {
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("SERomand", 1, 36)); // NOI18N
-        jRadioButton2.setText("Ajouter");
+        jRadioButton2.setText("Ajouter/Supprimer/Mise à jour");
         jRadioButton2.setOpaque(false);
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             @Override
@@ -152,14 +156,14 @@ public class ChoixAction extends JFrame {
        
        else if( "2".equals(jRadioButton2.getActionCommand()))
        {
-           new FenetreConnexion().setVisible(true);
-        this.setVisible(false);
+           new MiseAJour().setVisible(true);
+           this.setVisible(false);
        }
        
        else if( "3".equals(jRadioButton3.getActionCommand()))
        {
            new FenetreConnexion().setVisible(true);
-        this.setVisible(false);
+           this.setVisible(false);
        }
     }  
     
