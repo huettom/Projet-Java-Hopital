@@ -66,7 +66,7 @@ public class ChoixAction extends JFrame {
             }
         });
         jPanel1.add(jRadioButton2);
-        jRadioButton2.setBounds(810, 470, 440, 80);
+        jRadioButton2.setBounds(160, 470, 700, 80);
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("SERomand", 1, 36)); // NOI18N

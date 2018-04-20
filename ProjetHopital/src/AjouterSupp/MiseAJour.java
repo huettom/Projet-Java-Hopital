@@ -13,6 +13,7 @@ import java.sql.*;
 import Recherche.*;
 import projethopital.ChoixAction;
 import projethopital.Connexion;
+import Update.*;
 
 
 /**
@@ -236,7 +237,7 @@ public class MiseAJour extends JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
@@ -312,6 +313,18 @@ public class MiseAJour extends JFrame {
         }
         if(choix1==1 && choix2==6){
             new AjoutService().setVisible(true);
+            this.setVisible(false);
+        }
+        if(choix1==3 && choix2==1){
+            new MAJchambre().setVisible(true);
+            this.setVisible(false);
+        }
+        if(choix1==3 && choix2==2){
+            new MAJdocteur().setVisible(true);
+            this.setVisible(false);
+        }
+        if(choix1==3 && choix2==3){
+            new MAJemploye().setVisible(true);
             this.setVisible(false);
         }
     }
