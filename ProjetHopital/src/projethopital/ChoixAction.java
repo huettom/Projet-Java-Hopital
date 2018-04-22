@@ -14,6 +14,7 @@ import javax.swing.*;
 import java.sql.*;
 import Recherche.*;
 import AjouterSupp.*;
+import Reporting.*;
 
 /**
  *
@@ -162,7 +163,7 @@ public class ChoixAction extends JFrame {
        
        else if( "3".equals(jRadioButton3.getActionCommand()))
        {
-           new FenetreConnexion().setVisible(true);
+           new Reporting().setVisible(true);
            this.setVisible(false);
        }
     }  

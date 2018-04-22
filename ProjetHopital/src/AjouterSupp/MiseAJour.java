@@ -327,6 +327,18 @@ public class MiseAJour extends JFrame {
             new MAJemploye().setVisible(true);
             this.setVisible(false);
         }
+        if(choix1==3 && choix2==4){
+            new MAJinfirmier().setVisible(true);
+            this.setVisible(false);
+        }
+        if(choix1==3 && choix2==5){
+            new MAJmalade().setVisible(true);
+            this.setVisible(false);
+        }
+        if(choix1==3 && choix2==6){
+            new MAJservice().setVisible(true);
+            this.setVisible(false);
+        }
     }
     
     /**
